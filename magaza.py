@@ -1,4 +1,5 @@
 from datetime import datetime as dt #Satış işlemlerini tutarken satışın yapıldı tarihi de tutmak için
+import dil
 
 class magaza():
 
@@ -32,10 +33,10 @@ class magaza():
     #Satıcı adına göre satıcının bütün satışlarını ve toplam satışını yazdır, satıcı yoksa bulunamadı yazdır
     def SatisAl(self, satici) -> None:
         if satici not in self.__satis:
-            print('\nSatıcı Bulunamadı!')
+            print(dil.magaza()[0])
             return -1.0
         toplam = 0.0
-        print(f'{self.__mag_ad} mağazası {satici} satıcısı satışları (Tarih > Tutar):\n')
+        print(f'{self.__mag_ad} {dil.magaza()[1]} {satici} {dil.magaza()[2]}')
         for satis in self.__satis[satici]: 
             tarih,ucret = list(satis.items())[0]
             print(f'{tarih} > {ucret}')
@@ -43,5 +44,5 @@ class magaza():
         return toplam
         
     #Mağazanın toplam satış tutarını ve her satıcının teker teker toplam satışlarını bir string'e dönüştür ve geriye döndür
-    def __str__(self) -> str: return (f'Mağaza Toplam Satış: {sum([list(satis.values())[0] for satici in self.__satis.values() for satis in satici])}\n' +
-                                       '\n'.join([f'{k} Satıcısı Toplam Satış: {v}' for k, v in {saticiad: sum([list(satis.values())[0] for satis in satici]) for saticiad, satici in self.__satis.items()}.items()]))
+    def __str__(self) -> str: return (f'{dil.magaza()[3]} {sum([list(satis.values())[0] for satici in self.__satis.values() for satis in satici])}\n' +
+                                       '\n'.join([f'{k} {dil.magaza()[4]} {v}' for k, v in {saticiad: sum([list(satis.values())[0] for satis in satici]) for saticiad, satici in self.__satis.items()}.items()]))

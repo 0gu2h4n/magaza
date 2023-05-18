@@ -23,5 +23,24 @@ def main():
             except: print('Geçerli bir değer girin!')
         print('\nKayıt Başarılı!')
 
+    while True:
+        #Arama için mağaza adını al
+        mgz = input('\nBilgilerini getirmek istediğiniz mağaza adını girin (Çıkış için boş bırakın): ')
+        #Çıkış
+        if not mgz: break
+        #Bu adla kayıtlı bir mağaza var mı?
+        if mgz not in magazalar:
+            print('\nMağaza Bulunamadı!')
+            continue
+        #Bir satıcının satışları için satıcı adı al ya da bütün mağaza için
+        stc = input('\nSatışlarını getirmek istediğiniz satıcı adını girin (Bütün mağaza için boş bırakın): ')
+        #Bütün mağaza için
+        if not stc: print(f'\n{magazalar[mgz]}')
+        #Satıcı için
+        else: 
+            sts = magazalar[mgz].SatisAl(stc)
+            if sts != -1.0: print(f'\nSatıcı toplam satış tutarı: {sts}') 
+
+
 
 if __name__ == "__main__": main()

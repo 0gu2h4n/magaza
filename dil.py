@@ -8,7 +8,7 @@ __magaza_tr = [
     "Satıcısı Toplam Satış:"
 ]
 __main_tr = [
-    "Gerekli bilgileri girin... (Çıkış için bilgileri boş bırakın)",
+    "\nGerekli bilgileri girin... (Çıkış için bilgileri boş bırakın)",
     "Mağaza Adı:",
     "Satıcı Adı:",
     "Satıcı Cinsi:",
@@ -28,7 +28,7 @@ __magaza_en = [
     "Seller Total Sales:"
 ]
 __main_en = [
-    "Enter the required information... (Leave blank for exit)",
+    "\nEnter the required information... (Leave blank for exit)",
     "Store Name:",
     "Seller Name:",
     "Seller Type:",

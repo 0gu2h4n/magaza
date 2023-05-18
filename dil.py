@@ -1,4 +1,4 @@
-dil = "tr"
+dil = "en"
 
 __magaza_tr = [
     "\nSatıcı Bulunamadı!",
@@ -44,7 +44,11 @@ __main_en = [
 def main():
     if dil == "tr":
         return __main_tr
+    elif dil == "en":
+        return __main_en
     
 def magaza():
     if dil == "tr":
         return __magaza_tr
+    elif dil == "en":
+        return __magaza_en

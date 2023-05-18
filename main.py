@@ -2,8 +2,8 @@ from magaza import magaza #Mağaza kütüphanesi/dosyası
 import dil
 
 def main():
+    magazalar = dict() #Oluşturulan bütün mağazaların tutulacağı sözlük
     while True:
-        magazalar = dict() #Oluşturulan bütün mağazaların tutulacağı sözlük
 
         print(dil.main()[0])
         magazaadi, saticiadi, saticicinsi = input(dil.main()[1]), input(dil.main()[2]),input(dil.main()[3])#Bütün mağaza ve satıcı bilgilerini al

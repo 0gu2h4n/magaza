@@ -20,6 +20,26 @@ __main_tr = [
     "Satışlarını getirmek istediğiniz satıcı adını girin (Bütün mağaza için boş bırakın):",
     "\nSatıcı toplam satış tutarı:"
 ]
+__magaza_en = [
+    "\nSeller not found!",
+    "store",
+    "seller sales (Date > Amount):\n",
+    "Store Total Sales:",
+    "Seller Total Sales:"
+]
+__main_en = [
+    "Enter the required information... (Leave blank for exit)",
+    "Store Name:",
+    "Seller Name:",
+    "Seller Type:",
+    "Sales amount:",
+    "Enter a valid value!",
+    "\nRegistration Successful!",
+    "\nEnter the store name you want to get the information of (Leave blank for exit):",
+    "Store not found!",
+    "Enter the seller name you want to get the sales of (Leave blank for all store):",
+    "\nSeller total sales amount:"
+]
 
 def main():
     if dil == "tr":
